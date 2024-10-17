@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Clean Tracker</h1>
+    <p>Sie sind clean!</p>
+    <div class="time-container">
+      <div class="time-item">
+        <span id="days">0</span>
+        <div class="label">Tage</div>
+      </div>
+      <div class="time-item">
+        <span id="hours">0</span>
+        <div class="label">Stunden</div>
+      </div>
+      <div class="time-item">
+        <span id="minutes">0</span>
+        <div class="label">Minuten</div>
+      </div>
+      <div class="time-item">
+        <span id="seconds">0</span>
+        <div class="label">Sekunden</div>
+      </div>
+    </div>
+    <input type="date" id="cleanDate" />
+    <input type="time" id="cleanTime" />
+    <button onclick="saveCleanDateTime()">Speichern</button>
+    <button onclick="resetCleanDateTime()">Zurücksetzen</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
