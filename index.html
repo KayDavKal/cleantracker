@@ -5,40 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clean Tracker</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Clean Tracker - Track Your Progress">
-  <meta property="og:description" content="Track how long you've been clean from harmful habits like alcohol or smoking. Stay motivated with real-time updates!">
-  <meta property="og:url" content="https://kaydavkal.github.io/cleantracker">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Clean Tracker">
-  <meta property="og:locale" content="de_DE">
 </head>
 <body>
   <div class="container">
-    <h1>Clean Tracker</h1>
-    <p>Sie sind clean!</p>
-    <div class="time-container">
-      <div class="time-item">
-        <span id="days">0</span>
-        <div class="label">Tage</div>
-      </div>
-      <div class="time-item">
-        <span id="hours">0</span>
-        <div class="label">Stunden</div>
-      </div>
-      <div class="time-item">
-        <span id="minutes">0</span>
-        <div class="label">Minuten</div>
-      </div>
-      <div class="time-item">
-        <span id="seconds">0</span>
-        <div class="label">Sekunden</div>
-      </div>
+  <h1>Clean Tracker</h1>
+  <p>Sie sind clean!</p>
+  <div class="time-container">
+    <div class="time-item">
+      <div class="progress"></div>
+      <span id="days">0</span>
+      <div class="label">Tage</div>
     </div>
-    <input type="date" id="cleanDate" />
-    <input type="time" id="cleanTime" />
-    <button onclick="saveCleanDateTime()">Speichern</button>
-    <button onclick="resetCleanDateTime()">Zurücksetzen</button>
+    <div class="time-item">
+      <div class="progress"></div>
+      <span id="hours">0</span>
+      <div class="label">Stunden</div>
+    </div>
+     <div class="time-item">
+      <div class="progress"></div>
+      <span id="minutes">0</span>
+      <div class="label">Minuten</div>
+    </div>
+    <div class="time-item">
+      <div class="progress"></div>
+      <span id="seconds">0</span>
+      <div class="label">Sekunden</div>
+    </div>
+  </div>
+  <input type="date" id="cleanDate" />
+  <input type="time" id="cleanTime" />
+  <button onclick="saveCleanDateTime()">Speichern</button>
+  <button onclick="resetCleanDateTime()">Zurücksetzen</button>
   </div>
 
   <script src="script.js"></script>
