@@ -29,12 +29,14 @@ function calculateTimeClean() {
     document.getElementById('minutes').textContent = diffMinutes;
     document.getElementById('seconds').textContent = diffSeconds;
 
-    // Berechne den Fortschritt für Stunden, Minuten und Sekunden
+    // Berechne den Fortschritt für Tage, Stunden, Minuten und Sekunden
+    const dayProgress = (diffDays / 365) * 100; // Prozentwert für Tage
     const hourProgress = (diffHours / 24) * 100; // Prozentwert für Stunden
     const minuteProgress = (diffMinutes / 60) * 100; // Prozentwert für Minuten
     const secondProgress = (diffSeconds / 60) * 100; // Prozentwert für Sekunden
 
     // Update die Breite der Progress Bars
+    document.querySelector('.progress').style.width = dayProgress + '%';
     document.querySelector('.time-item:nth-child(2) .progress').style.width = hourProgress + '%';
     document.querySelector('.time-item:nth-child(3) .progress').style.width = minuteProgress + '%';
     document.querySelector('.time-item:nth-child(4) .progress').style.width = secondProgress + '%';
@@ -49,6 +51,7 @@ function resetCleanDateTime() {
   document.getElementById('seconds').textContent = 0;
 
   // Setze die Progress Bars zurück
+  document.querySelector('.progress').style.width = '0%';
   document.querySelector('.time-item:nth-child(2) .progress').style.width = '0%';
   document.querySelector('.time-item:nth-child(3) .progress').style.width = '0%';
   document.querySelector('.time-item:nth-child(4) .progress').style.width = '0%';
