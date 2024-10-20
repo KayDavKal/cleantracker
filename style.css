@@ -106,3 +106,9 @@ button {
 button:hover {
   background: #5e78e1;
 }
+
+@media (min-width: 800px) {
+  .container {
+    padding: 0 20rem;
+  }
+}
