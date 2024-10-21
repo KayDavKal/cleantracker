@@ -277,6 +277,9 @@ button:hover {
 }
 
 @media (min-width: 1200px) {
+  #nav {
+    width: 10%;
+  }
   #modal {
     padding: 0 40rem;
   }
@@ -284,6 +287,6 @@ button:hover {
     padding: 0 40rem;
   }
   #reset-modal div {
-    width: 30%;
+    width: 20%;
   }
 }
