@@ -3,39 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clean Tracker</title>
+  <title>CleanTracker</title>
+  <link rel="icon" href="icons/logo.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-  <h1>Clean Tracker</h1>
-  <p>Sie sind clean!</p>
-  <div class="time-container">
-    <div class="time-item">
-      <div class="progress"></div>
-      <span id="days">0</span>
-      <div class="label">Tage</div>
+  <nav>
+    <div>
+      <img src="icons/logo.png">
+      <h1>CleanTracker</h1>
     </div>
-    <div class="time-item">
-      <div class="progress"></div>
-      <span id="hours">0</span>
-      <div class="label">Stunden</div>
+    <img src="icons/menu.svg" onclick="toggleNav()" id="navbtn">
+  </nav>
+  <div id="nav">
+    <div>
+      <a href="#">About</a>
+      <a href="https://youtu.be/dQw4w9WgXcQ?si=ij-KtKg_Gj2v_LDP" target="_blank">Never Gonna Give You Up</a>
     </div>
-     <div class="time-item">
-      <div class="progress"></div>
-      <span id="minutes">0</span>
-      <div class="label">Minuten</div>
-    </div>
-    <div class="time-item">
-      <div class="progress"></div>
-      <span id="seconds">0</span>
-      <div class="label">Sekunden</div>
+    <div>
+      <hr />
+      <b>Want to contribute?</b>
+      <a href="#"><img src="icons/github.svg">Github</a>
     </div>
   </div>
-  <input type="date" id="cleanDate" />
-  <input type="time" id="cleanTime" />
-  <button onclick="saveCleanDateTime()">Speichern</button>
-  <button onclick="resetCleanDateTime()">Zurücksetzen</button>
+  <div id="modal">
+    <h1>Füge Tracker hinzu</h1>
+    <input type="text" id="cleanTitle" placeholder="Tracker Titel" />
+    <input type="date" id="cleanDate" />
+    <input type="time" id="cleanTime" />
+    <button onclick="saveCleanDateTime()">Erstellen</button>
+    <button onclick="toggleModal()">Zurück</button>
+  </div>
+  <div id="reset-modal">
+    <div>
+      <b>Du bist dabei deinen Tracker zu löschen!</b>
+      <p>Bist du dir sicher, dass du deinen Tracker löschen möchtest?</p>
+      <button onclick="resetCleanDateTime()" class="delete-btn">Ja, ich bin mir sicher!</button>
+      <button onclick="toggleResetModal()">Nein, ich will nicht löschen.</button>
+    </div>
+  </div>
+  <div class="head" id="head">
+    <h1>Willkommen!</h1>
+    <p>Erstelle einen Tracker oder lade bereits existierende Tracker</p>
+    <button onclick="toggleModal()">Erstelle einen Tracker</button>
+    <div id="tracker-container"></div>
+  </div>
+  <div class="container" id="container">
+    <h1 id="tracker-title">Tracker Name</h1>
+    <div class="time-container">
+      <div class="time-item">
+        <div class="progress"></div>
+        <span id="days">0</span>
+        <div class="label">Tage</div>
+      </div>
+      <div class="time-item">
+        <div class="progress"></div>
+        <span id="hours">0</span>
+        <div class="label">Stunden</div>
+      </div>
+      <div class="time-item">
+        <div class="progress"></div>
+        <span id="minutes">0</span>
+        <div class="label">Minuten</div>
+      </div>
+      <div class="time-item">
+        <div class="progress"></div>
+        <span id="seconds">0</span>
+        <div class="label">Sekunden</div>
+      </div>
+    </div>
+    <button onclick="toggleResetModal()" class="delete-btn">Tracker Löschen</button>
+    <button onclick="toggleDisplay()">Zurück zum Hauptmenü</button>
   </div>
 
   <script src="script.js"></script>
